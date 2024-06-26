@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.screens.settings.SettingsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_layout_header"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:background="@color/main_color_background_app"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/settings_image_header"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_marginStart="10dp"
+
+            app:srcCompat="@drawable/settings_photo_missing"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="16dp"
+
+            app:layout_constraintStart_toEndOf="@+id/settings_image_header"
+            app:layout_constraintTop_toTopOf="@+id/settings_image_header"
+            app:layout_constraintBottom_toBottomOf="@+id/settings_image_header">
+
+            <TextView
+                android:id="@+id/settings_text_view_full_name"
+                android:hint="@string/settings_full_name_hint"
+                android:textColorHint="@color/main_color_text"
+                style="@style/settings_header_text" />
+
+            <TextView
+                android:id="@+id/settings_text_view_status"
+                android:hint="@string/settings_status_hint"
+                android:textColorHint="@color/main_color_text"
+                style="@style/settings_header_text" />
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:paddingVertical="20dp"
+        android:paddingHorizontal="20dp"
+        android:background="@color/main_color_background_app"
+
+        app:layout_constraintTop_toBottomOf="@+id/constraint_layout_header"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="@string/settings_title_profile_hint"
+            android:textColor="@color/main_color_text"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/settings_phone_number"
+            android:hint="@string/settings_phone_number_hint"
+            android:textColorHint="@color/main_color_text"
+            style="@style/settingsButtons" />
+
+        <View style="@style/settings_separator" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/settings_username"
+            style="@style/settingsButtons"
+            android:textColorHint="@color/main_color_text"
+            android:hint="@string/settings_username_hint"/>
+
+        <View style="@style/settings_separator"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/settings_bio"
+            style="@style/settingsButtons"
+            android:textColorHint="@color/main_color_text"
+            android:hint="@string/settings_bio_hint"/>
+
+        <View style="@style/settings_separator"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

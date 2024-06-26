@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="mainToolbar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?attr/actionBarSize</item>
+        <item name="android:background">@color/main_color_background_app</item>
+<!--        <item name="android:theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>-->
+    </style>
+
+    <style name="settingsButtons">
+        <item name="android:textSize">17sp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">7dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:textColor">@color/main_color_text</item>
+        <item name="android:background">@drawable/settings_ripple_style_elements</item>
+    </style>
+
+    <style name="settings_separator">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_marginBottom">16dp</item>
+        <item name="android:background">@color/main_color_text</item>
+    </style>
+
+    <style name="settings_header_text">
+        <item name="android:textSize">15sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:textColor">@color/main_color_text</item>
+    </style>
+
+    <style name="text_input_edit_text_text_type">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="text_input_edit_text_number_type">
+        <item name="android:textColor">@color/main_color_text</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:inputType">phone</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="text_color">
+        <item name="android:textSize">15sp</item>
+        <item name="android:color">@color/main_color_text</item>
+    </style>
+
+</resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Стандартные цвета -->
+    <color name="black">#000000</color>
+    <color name="grey">#808080</color>
+    <color name="white">#FFFFFF</color>
+
+    <!-- Кастомные цвета -->
+    <color name="main_color_background_app">#84B5B2</color>
+    <color name="main_color_text">#163A43</color>
+    <color name="ripple_color">#b5d3d1</color>
+    <color name="receiving_bg_message">#818b8a</color>
+    <color name="user_bg_message">#808080</color>
+</resources>

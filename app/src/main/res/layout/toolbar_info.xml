@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/main_color_background_app"
+    android:layout_height="?attr/actionBarSize">
+
+    <TextView
+        android:id="@+id/toolbar_chat_fullname"
+        tools:text="Maksim Pozdniakov"
+        android:textColor="@color/main_color_text"
+        android:textStyle="bold"
+        android:textSize="17sp"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="@dimen/app_margin_start"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/toolbar_chat_status"
+        tools:text="в сети"
+        android:textColor="@color/main_color_text"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="@dimen/app_margin_start"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_chat_fullname"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

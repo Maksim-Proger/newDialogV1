@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">New Dialog</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="register_text_enter_code">Введите полученный код</string>
+    <string name="field_register_phone_number">Номер телефона</string>
+    <string name="registration_title">Вход | Регистрация</string>
+    <string name="registration_information">Для регистрации или входа необходимо указать ваш номер
+        телефона</string>
+    <string name="settings_menu_btn_edit_name">Изменить имя</string>
+    <string name="settings_menu_btn_exit">Выход</string>
+    <string name="btn_settings_title">Настройки</string>
+    <string name="btn_chats_title">Чаты</string>
+    <string name="navigation_drawer_open">Открыть</string>
+    <string name="navigation_drawer_close">Закрыть</string>
+    <string name="settings_input_name_hint">Введите имя</string>
+    <string name="settings_input_second_name_hint">Введите фамилию</string>
+    <string name="settings_toast_name_is_empty">Имя не может быть пустым</string>
+    <string name="toast_data_update">Данные обновлены</string>
+    <string name="register_input_code">Введите код</string>
+    <string name="settings_user_name">Введите имя пользователя</string>
+    <string name="empty_field_toast">Поле пустое</string>
+    <string name="such_user_already_exists_toast">Такой пользователь уже существует</string>
+    <string name="settings_bio">Напишите о себе</string>
+    <string name="settings_bio_hint">Сведения</string>
+    <string name="settings_username_hint">Имя пользователя</string>
+    <string name="settings_phone_number_hint">Номер телефона</string>
+    <string name="settings_title_profile_hint">Профиль</string>
+    <string name="settings_status_hint">Статус</string>
+    <string name="settings_full_name_hint">Полное имя</string>
+    <string name="btn_clear_chat">Очистить чат</string>
+    <string name="btn_delete_chat">Удалить чат</string>
+
+</resources>
