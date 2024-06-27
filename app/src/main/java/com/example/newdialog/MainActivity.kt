@@ -1,9 +1,11 @@
 package com.example.newdialog
 
 import android.content.pm.PackageManager
+import android.os.Build
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.example.newdialog.database.AUTH
 import com.example.newdialog.database.initFirebase
@@ -14,7 +16,10 @@ import com.example.newdialog.ui.screens.register.EnterPhoneNumberFragment
 import com.example.newdialog.ui.objects.AppDrawer
 import com.example.newdialog.utilits.APP_ACTIVITY
 import com.example.newdialog.utilits.AppStates
+import com.example.newdialog.utilits.PERMISSION_REQUEST
+import com.example.newdialog.utilits.POST_NOTIFICATIONS
 import com.example.newdialog.utilits.READ_CONTACTS
+import com.example.newdialog.utilits.checkPermission
 import com.example.newdialog.utilits.initContacts
 import com.example.newdialog.utilits.replaceFragment
 import kotlinx.coroutines.CoroutineScope
@@ -44,6 +49,7 @@ class MainActivity : AppCompatActivity() {
                 initContacts()
             }
 
+            checkAndRequestAllPermissions()
             initFields()
             initFunc()
         }
@@ -75,18 +81,28 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    //  Метод выводит окно с запросом на предоставление разрешения
+    //  Метод выводит окно с запросом на предоставление разрешения (убрать запрос на получение уведомлений)
     override fun onRequestPermissionsResult(
         requestCode: Int,
         permissions: Array<out String>,
         grantResults: IntArray
     ) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-        if (
-            ContextCompat.checkSelfPermission(APP_ACTIVITY, READ_CONTACTS) ==
-            PackageManager.PERMISSION_GRANTED
-            ) {
+        if (ContextCompat.checkSelfPermission(APP_ACTIVITY, READ_CONTACTS) == PackageManager.PERMISSION_GRANTED) {
             initContacts()
+        }
+    }
+
+    // Запрашиваем разрешение на получение уведомлений
+    fun checkAndRequestAllPermissions() {
+        val permissionsNeeded = mutableListOf<String>()
+
+        if (Build.VERSION.SDK_INT >= 33 && !checkPermission(POST_NOTIFICATIONS)) {
+            permissionsNeeded.add(POST_NOTIFICATIONS)
+        }
+
+        if (permissionsNeeded.isNotEmpty()) {
+            ActivityCompat.requestPermissions(this, permissionsNeeded.toTypedArray(), PERMISSION_REQUEST)
         }
     }
 }
