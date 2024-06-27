@@ -13,6 +13,7 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application
+        android:name=".utilits.AppMain"
         android:allowBackup="true"
         android:requestLegacyExternalStorage="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
